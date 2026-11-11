@@ -7,9 +7,9 @@
   <meta name="description" content="A free-to-visit creative library of original games, books, and songs.">
   <title>The Open Archive — Games, Books & Music</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css">
-  <script src="catalog.js" defer></script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261110-books-fix2">
+  <script src="catalog.js?v=20261110-books-fix2" defer></script>
+  <script src="app.js?v=20261110-books-fix2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#collection">Skip to the collection</a>
@@ -67,6 +67,14 @@
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.6 4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             <input id="search-input" type="search" placeholder="Search the archive…" autocomplete="off" aria-label="Search games, books, and music">
           </label>
+        </div>
+        <div class="books-shortcut" id="books-shortcut" hidden>
+          <div class="books-shortcut-copy">
+            <span class="books-shortcut-eyebrow">/ AUTHOR BOOKSHELF</span>
+            <strong>Find my books on Amazon.</strong>
+            <p>Browse my Kindle book listings. Amazon displays current prices and availability.</p>
+          </div>
+          <a href="https://www.amazon.com/s?k=eli+lamunyon&amp;i=digital-text" target="_blank" rel="noopener noreferrer">Browse books on Amazon <span aria-hidden="true">↗</span></a>
         </div>
         <div class="works-grid" id="works-grid" aria-live="polite"></div>
         <div class="empty-state" id="empty-state" hidden>
