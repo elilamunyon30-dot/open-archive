@@ -7,6 +7,7 @@
   const searchInput = $("search-input");
   const emptyState = $("empty-state");
   const filters = [...document.querySelectorAll(".filter")];
+  const booksShortcut = $("books-shortcut");
   const names = { all: "works", games: "games", books: "books", music: "songs" };
   const symbols = {
     games: '<svg viewBox="0 0 120 120" fill="none" aria-hidden="true"><rect x="18" y="18" width="84" height="84" rx="9" stroke="currentColor" stroke-width="3"/><path d="M46 18v84M74 18v84M18 46h84M18 74h84" stroke="currentColor" stroke-opacity=".35" stroke-width="2"/><path d="m53 53 14 14m0-14L53 67" stroke="currentColor" stroke-width="5" stroke-linecap="round"/><circle cx="31.5" cy="32" r="6" fill="currentColor"/><circle cx="88" cy="88" r="6" fill="currentColor"/></svg>',
@@ -83,6 +84,7 @@
     }
   }
   function render() {
+    if (booksShortcut) booksShortcut.hidden = selected !== "books";
     const query = searchInput.value.trim().toLocaleLowerCase();
     const result = works.filter(item =>
       (selected === "all" || item.type === selected) &&
