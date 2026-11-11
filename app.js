@@ -60,13 +60,13 @@
     details.appendChild(el("div", "card-divider"));
 
     const bottom = el("div", "card-bottom");
-    bottom.appendChild(el("small", "", published ? "Free to access" : "Not published yet"));
+    bottom.appendChild(el("small", "", published ? (item.accessNote || "Free to access") : "Not published yet"));
     if (published) {
       const button = el("a", "work-link");
       button.href = url;
       button.target = "_blank";
       button.rel = "noopener noreferrer";
-      button.textContent = type === "games" ? "Play now " : type === "books" ? "Read now " : "Listen now ";
+      button.textContent = item.actionLabel ? `${item.actionLabel} ` : type === "games" ? "Play now " : type === "books" ? "Read now " : "Listen now ";
       button.appendChild(el("span", "arrow", "↗"));
       bottom.appendChild(button);
     } else {
