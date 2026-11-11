@@ -997,7 +997,8 @@ var MinehuntUI;
         $('sound-top').textContent = soundOn ? '♫' : '♪̸';
         $('sound-top').setAttribute('aria-label', soundOn ? 'Mute sound' : 'Unmute sound');
         $('modal-body').addEventListener('click', onModalClick);
-        $('modal-overlay').addEventListener('click', e => {            if (e.target === $('modal-overlay') && (userModal === 'help' || userModal === 'stats'))
+        $('modal-overlay').addEventListener('click', e => {
+            if (e.target === $('modal-overlay') && (userModal === 'help' || userModal === 'stats'))
                 closeModal();
         });
         window.addEventListener('keydown', e => {
