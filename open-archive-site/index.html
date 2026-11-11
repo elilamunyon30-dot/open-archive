@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11121b">
+  <meta name="description" content="A free-to-visit creative library of original games, books, and songs.">
+  <title>The Open Archive — Games, Books & Music</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#collection">Skip to the collection</a>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <header class="site-header container">
+    <a class="brand" href="./" aria-label="The Open Archive — home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 36 36" fill="none"><path d="M18 3.5 32.5 18 18 32.5 3.5 18 18 3.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M18 10v16M10 18h16" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="18" r="3.2" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-text">THE OPEN<span>ARCHIVE</span></span>
+    </a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="#collection">Explore the library</a>
+      <a href="#about" class="nav-about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> AN OPEN CREATIVE COLLECTION</div>
+        <h1 id="hero-title">Play something.<br>Read something.<br><em>Feel something.</em></h1>
+        <p class="hero-description" id="site-intro">A home for the games, stories, and music I create. Come in, explore, and find something worth keeping.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#collection">Explore the collection <span aria-hidden="true">↗</span></a>
+          <span class="free-note"><span class="free-note-star" aria-hidden="true">✳</span> Free to visit · No account needed</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-back"></div>
+        <div class="art-orbit orbit-front"></div>
+        <div class="art-card art-games"><div class="art-card-top"><span>01 / PLAY</span><span>↗</span></div><svg viewBox="0 0 120 116" fill="none"><path d="M14 12H106V104H14V12Z" stroke="currentColor" stroke-width="2"/><path d="M44.7 12V104M75.3 12V104M14 42.7H106M14 73.3H106" stroke="currentColor" stroke-opacity=".34" stroke-width="1.6"/><path d="m55 52 10 10m0-10L55 62" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><circle cx="29" cy="27" r="6" fill="currentColor"/><circle cx="91" cy="89" r="6" fill="currentColor"/></svg><strong>GAMES</strong></div>
+        <div class="art-card art-music"><div class="art-card-top"><span>03 / LISTEN</span><span>↗</span></div><div class="wave-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>MUSIC</strong></div>
+        <div class="art-card art-books"><div class="art-card-top"><span>02 / READ</span><span>↗</span></div><svg viewBox="0 0 120 116" fill="none"><path d="M60 24c-15-7-27-7-41-3v66c14-4 26-4 41 3 15-7 27-7 41-3V21c-14-4-26-4-41 3Z" stroke="currentColor" stroke-width="2.7" stroke-linejoin="round"/><path d="M60 24v66M29 36c10-2 18-1 24 2M29 49c10-2 18-1 24 2M67 38c6-3 14-4 24-2M67 51c6-3 14-4 24-2" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/></svg><strong>BOOKS</strong></div>
+        <div class="art-spark art-spark-one">✶</div><div class="art-spark art-spark-two">✧</div>
+      </div>
+    </section>
+
+    <section class="library-section" id="collection" aria-labelledby="collection-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="section-overline">/ THE LIBRARY</div><h2 id="collection-title">Explore the collection<span class="title-dot">.</span></h2><p>Choose a shelf, or search for something specific.</p></div>
+          <div class="collection-count"><span id="visible-count">0</span><span id="count-word">works listed</span></div>
+        </div>
+        <div class="toolbar">
+          <div class="filter-tabs" role="group" aria-label="Filter by type">
+            <button class="filter is-active" data-filter="all" type="button" aria-pressed="true">All works <span id="count-all">0</span></button>
+            <button class="filter" data-filter="games" type="button" aria-pressed="false">Games <span id="count-games">0</span></button>
+            <button class="filter" data-filter="books" type="button" aria-pressed="false">Books <span id="count-books">0</span></button>
+            <button class="filter" data-filter="music" type="button" aria-pressed="false">Music <span id="count-music">0</span></button>
+          </div>
+          <label class="search-box" for="search-input">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.6 4.6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <input id="search-input" type="search" placeholder="Search the archive…" autocomplete="off" aria-label="Search games, books, and music">
+          </label>
+        </div>
+        <div class="works-grid" id="works-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-symbol" aria-hidden="true">✳</span>
+          <h3 id="empty-title">Nothing on this shelf yet.</h3>
+          <p id="empty-description">New work will appear here when it is added.</p>
+          <button type="button" id="clear-filters">Show all works</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section container" id="about">
+      <div class="about-icon" aria-hidden="true">✷</div>
+      <div class="about-copy"><div class="section-overline">/ WHY THIS EXISTS</div><h2>Made to be shared.</h2><p id="about-text">Some ideas turn into games. Some become books. Some need to be songs. This is where they all live together.</p></div>
+      <a href="#collection" class="about-link">Start exploring <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-content"><div class="footer-brand">THE OPEN ARCHIVE <span>✳</span></div><p>Free to explore. Individual works may have their own reuse rights.</p><a href="#" id="back-to-top">Back to top ↑</a></div></footer>
+</body>
+</html>
