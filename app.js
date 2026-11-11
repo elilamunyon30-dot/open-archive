@@ -15,7 +15,7 @@
     music: '<svg viewBox="0 0 120 120" fill="none" aria-hidden="true"><path d="M46 33v58c0 8-9 15-19 15S9 101 9 93s8-13 18-13c6 0 10 1 13 3V32l68-17v65c0 8-9 15-19 15S71 90 71 82s8-13 18-13c6 0 10 1 13 3V22L46 36" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
 
-  let selected = "all";
+  let selected = new URLSearchParams(window.location.search).get("category") === "books" ? "books" : "all";
   const text = (value) => String(value ?? "");
   function safeUrl(raw) {
     if (typeof raw !== "string" || !raw.trim()) return "";
@@ -116,5 +116,5 @@
   if (archive.site.about) $("about-text").textContent = archive.site.about;
   if (archive.site.name) { document.title = `${archive.site.name} — Games, Books & Music`; }
   renderCounts();
-  render();
+  chooseFilter(selected);
 })();
