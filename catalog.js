@@ -38,6 +38,22 @@ window.ARCHIVE = {
       "url": ""
     },
     {
+      "id": "amazon-books",
+      "type": "books",
+      "title": "Eli LaMunyon — Books on Amazon",
+      "description": "Explore my published Kindle book listings on Amazon. Book prices and availability are shown there.",
+      "tags": [
+        "Author collection",
+        "Kindle",
+        "Amazon"
+      ],
+      "accent": "rose",
+      "status": "published",
+      "url": "https://www.amazon.com/s?k=eli+lamunyon&i=digital-text",
+      "actionLabel": "Browse books",
+      "accessNote": "Amazon pricing may apply"
+    },
+    {
       "id": "draw-a-circle-in-the-sand",
       "type": "music",
       "title": "Draw a Circle in the Sand",
@@ -181,6 +197,19 @@ window.ARCHIVE = {
       "accent": "blue",
       "status": "published",
       "url": "https://suno.com/s/4ivzk8KiSOqWxKOP"
+    },
+    {
+      "id": "pronoia-creation",
+      "type": "music",
+      "title": "Pronoia Creation",
+      "description": "An original song. Listen free on Suno.",
+      "tags": [
+        "Original song",
+        "Suno"
+      ],
+      "accent": "lime",
+      "status": "published",
+      "url": "https://suno.com/s/GRXuOqNCea9gjF0M"
     }
   ]
 };
