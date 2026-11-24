@@ -15,7 +15,8 @@
     music: '<svg viewBox="0 0 120 120" fill="none" aria-hidden="true"><path d="M46 33v58c0 8-9 15-19 15S9 101 9 93s8-13 18-13c6 0 10 1 13 3V32l68-17v65c0 8-9 15-19 15S71 90 71 82s8-13 18-13c6 0 10 1 13 3V22L46 36" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
 
-  let selected = new URLSearchParams(window.location.search).get("category") === "books" ? "books" : "all";
+  const requestedCategory = new URLSearchParams(window.location.search).get("category");
+  let selected = ["games", "books", "music"].includes(requestedCategory) ? requestedCategory : "all";
   const text = (value) => String(value ?? "");
   function safeUrl(raw) {
     if (typeof raw !== "string" || !raw.trim()) return "";
@@ -40,7 +41,14 @@
     const published = item.status === "published" && !!url;
     const accent = ["lime", "purple", "orange", "blue", "rose", "yellow"].includes(item.accent) ? item.accent : "lime";
     const card = el("article", "work-card");
-    const cover = el("div", `work-cover accent-${accent}`);
+    const cover = el(type === "games" && published ? "a" : "div", `work-cover accent-${accent}`);
+    if (type === "games" && published) {
+      cover.href = url;
+      cover.target = "_blank";
+      cover.rel = "noopener noreferrer";
+      cover.setAttribute("aria-label", `Play ${item.title} on Playgama`);
+      cover.style.textDecoration = "none";
+    }
     cover.innerHTML = symbols[type];
     cover.appendChild(el("span", "cover-number", `${String(index + 1).padStart(2, "0")} / ${type.toUpperCase()}`));
     cover.appendChild(el("span", "cover-corner", "✳"));
