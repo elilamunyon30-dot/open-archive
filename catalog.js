@@ -1,6 +1,6 @@
 /* The Open Archive catalog. Each published work has a Play, Read, or Listen link.
    Add books when you provide their Amazon links.
-   Games can be linked as local HTML files and songs as Suno URLs.
+   Published games link to Playgama and songs link to Suno.
 */
 window.ARCHIVE = {
   site: {
@@ -10,23 +10,65 @@ window.ARCHIVE = {
   },
   works: [
     {
-      "id": "minehunt",
+      "id": "citadel-of-ten",
       "type": "games",
-      "title": "Minehunt",
-      "description": "The mines move every time you dig. Follow the changing clues, capture every mine, and survive with three lives.",
+      "title": "CITADEL OF TEN",
+      "description": "Build and upgrade towers, cooperate with allies, and defend the citadel against escalating enemy waves.",
       "tags": [
-        "Playable now",
-        "Logic puzzle",
-        "Moving mines"
+        "Tower defense",
+        "Strategy",
+        "Upgrades"
+      ],
+      "accent": "purple",
+      "status": "published",
+      "url": "https://playgama.ai/play/zg23ssxyxyeplp"
+    },
+    {
+      "id": "forgeborn",
+      "type": "games",
+      "title": "FORGEBORN",
+      "description": "Build an automated factory, manufacture products, and fund your defenses against enemy sieges.",
+      "tags": [
+        "Automation",
+        "Factory",
+        "Strategy"
+      ],
+      "accent": "orange",
+      "status": "published",
+      "url": "https://playgama.ai/play/ikqhr6adpyp6zq"
+    },
+    {
+      "id": "watershed",
+      "type": "games",
+      "title": "WATERSHED — AGAINST THE FLOOD",
+      "description": "Reshape terrain, redirect flowing water, and protect a growing community from storms.",
+      "tags": [
+        "Simulation",
+        "Flood defense",
+        "Strategy"
+      ],
+      "accent": "blue",
+      "status": "published",
+      "url": "https://playgama.ai/play/klhd2lcioxrssf"
+    },
+    {
+      "id": "first-life",
+      "type": "games",
+      "title": "FIRST LIFE — THE LIVING NETWORK",
+      "description": "Cultivate a colony of connected organisms, strengthen cooperation, and survive threats.",
+      "tags": [
+        "Artificial life",
+        "Simulation",
+        "Strategy"
       ],
       "accent": "lime",
       "status": "published",
-      "url": "games/minehunt/index.html"
+      "url": "https://playgama.ai/play/2rg7n6g6xionla"
     },
     {
       "id": "number-snake",
       "type": "games",
-      "title": "3D Number Snake",
+      "title": "WYRM",
       "description": "Reconstruct a hidden route through a three-dimensional grid using clues about how many times each cell was crossed.",
       "tags": [
         "3D",
@@ -34,8 +76,50 @@ window.ARCHIVE = {
         "Puzzle"
       ],
       "accent": "purple",
-      "status": "coming-soon",
-      "url": ""
+      "status": "published",
+      "url": "https://playgama.ai/play/mswy6qeejqecfn"
+    },
+    {
+      "id": "switchyard",
+      "type": "games",
+      "title": "SWITCHYARD",
+      "description": "Manage railway switches and guide trains through increasingly challenging levels.",
+      "tags": [
+        "Railways",
+        "Strategy",
+        "Puzzle"
+      ],
+      "accent": "yellow",
+      "status": "published",
+      "url": "https://playgama.ai/play/7xf564eherx65o"
+    },
+    {
+      "id": "rootbound",
+      "type": "games",
+      "title": "ROOTBOUND",
+      "description": "Explore trees, fungal networks, and the connections that sustain a living forest.",
+      "tags": [
+        "Trees",
+        "Ecology",
+        "Simulation"
+      ],
+      "accent": "lime",
+      "status": "published",
+      "url": "https://playgama.ai/play/wi6dhi2xgc5g7i"
+    },
+    {
+      "id": "minehunt",
+      "type": "games",
+      "title": "MINEHUNT",
+      "description": "The mines move every time you dig. Follow the changing clues, capture every mine, and survive with three lives.",
+      "tags": [
+        "Logic puzzle",
+        "Moving mines",
+        "Survival"
+      ],
+      "accent": "rose",
+      "status": "published",
+      "url": "https://playgama.ai/play/ohbw7rdv5njo3k"
     },
     {
       "id": "amazon-books",
